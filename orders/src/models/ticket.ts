@@ -56,7 +56,6 @@ ticketSchema.statics.findByIdAndPreviousVersion = (event: {
   id: string;
   version: number;
 }) => {
-  console.log(event);
   return Ticket.findOne({
     _id: event.id,
     version: event.version - 1,

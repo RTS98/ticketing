@@ -14,8 +14,6 @@ const setup = async () => {
 
   await ticket.save();
 
-  console.log(ticket);
-
   const data: TicketUpdatedEvent["data"] = {
     id: ticket.id,
     version: ticket.version + 1,
@@ -54,7 +52,7 @@ it("acks the message", async () => {
 });
 
 it("does not call ack if the event has a skipped version number", async () => {
-  const { msg, data, listener, ticket } = await setup();
+  const { msg, data, listener } = await setup();
 
   data.version = 10;
 
