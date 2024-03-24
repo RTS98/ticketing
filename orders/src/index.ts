@@ -49,7 +49,7 @@ const start = async () => {
     console.error(err);
   }
 
-  app.listen(4001, () => {
+  app.listen(4002, () => {
     console.log("Listening on port 4001");
   });
 };

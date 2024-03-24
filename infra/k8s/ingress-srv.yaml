@@ -31,7 +31,7 @@ spec:
               service:
                 name: orders-srv
                 port:
-                  number: 4000
+                  number: 4002
           - path: /?(.*)
             pathType: Prefix
             backend:
