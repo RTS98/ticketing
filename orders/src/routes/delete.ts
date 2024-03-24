@@ -32,6 +32,7 @@ router.patch(
       ticket: {
         id: order.ticket.id,
       },
+      version: 0,
     });
 
     return res.send(order);

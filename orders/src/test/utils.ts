@@ -1,5 +1,6 @@
 import { sign } from "jsonwebtoken";
 import { Ticket } from "../models/ticket";
+import mongoose from "mongoose";
 
 export const getCookie = () => {
   const payload = {
@@ -39,6 +40,7 @@ export const getCookieOne = () => {
 
 export const buildTicket = async () => {
   const ticket = Ticket.build({
+    id: new mongoose.Types.ObjectId().toHexString(),
     title: "Concert",
     price: 20,
   });
