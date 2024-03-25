@@ -1,8 +1,9 @@
 import { sign } from "jsonwebtoken";
+import mongoose from "mongoose";
 
-export const getCookie = () => {
+export const getCookie = (id?: string) => {
   const payload = {
-    id: "12",
+    id: id ?? new mongoose.Types.ObjectId().toHexString(),
     email: "test@gmail.com",
   };
 

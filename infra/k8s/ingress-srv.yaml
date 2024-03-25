@@ -15,7 +15,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: payment-srv
+                name: payments-srv
                 port:
                   number: 4003
           - path: /api/users/?(.*)
